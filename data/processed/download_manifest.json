@@ -1,0 +1,122 @@
+[
+  {
+    "stock_code": "600660",
+    "company": "福耀玻璃",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225479532.PDF",
+    "disclosure_date": "2026-08-19",
+    "file": "600660_福耀玻璃_2026H1.pdf",
+    "bytes": 1134755,
+    "pages": 142,
+    "sha256": "321bab45f0984edad84da2c346da0613cfb19aa1b72b0c274b430a1140d01429"
+  },
+  {
+    "stock_code": "601689",
+    "company": "拓普集团",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225521853.PDF",
+    "disclosure_date": "2026-08-28",
+    "file": "601689_拓普集团_2026H1.pdf",
+    "bytes": 1310127,
+    "pages": 188,
+    "sha256": "762f31df5ffde5a346ebf946c17f34d8e3a33777fc43f71d521e5a434ec03416"
+  },
+  {
+    "stock_code": "600741",
+    "company": "华域汽车",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225516573.PDF",
+    "disclosure_date": "2026-08-28",
+    "file": "600741_华域汽车_2026H1.pdf",
+    "bytes": 1046659,
+    "pages": 149,
+    "sha256": "77db47cdf18cc46123c4924cb869a75dc3d4404f718e132292e6c9132e65f2f9"
+  },
+  {
+    "stock_code": "002920",
+    "company": "德赛西威",
+    "report": "2026年半年度报告全文",
+    "exchange": "深交所",
+    "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-14/2aab2da4-0d48-471f-b396-fbded887d69c.PDF",
+    "disclosure_date": "2026-08-14",
+    "file": "002920_德赛西威_2026H1.pdf",
+    "bytes": 3562638,
+    "pages": 144,
+    "sha256": "255395c61411f0ef72c783b22146aec50d5b4a69964e441f21868b7b166ad7d5"
+  },
+  {
+    "stock_code": "603596",
+    "company": "伯特利",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225521940.PDF",
+    "disclosure_date": "2026-08-28",
+    "file": "603596_伯特利_2026H1.pdf",
+    "bytes": 1353238,
+    "pages": 249,
+    "sha256": "10702a45e500bdc38dbfd658c5ad248fbcf379ca7878dd829af67f25a3f1c2c5"
+  },
+  {
+    "stock_code": "601799",
+    "company": "星宇股份",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225509977.PDF",
+    "disclosure_date": "2026-08-27",
+    "file": "601799_星宇股份_2026H1.pdf",
+    "bytes": 960107,
+    "pages": 143,
+    "sha256": "4ddf7e7f7f9612370f0687aa917db3fd66f938bcd4502a5d3c108e6d75bf3565"
+  },
+  {
+    "stock_code": "600699",
+    "company": "均胜电子",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225506436.PDF",
+    "disclosure_date": "2026-08-26",
+    "file": "600699_均胜电子_2026H1.pdf",
+    "bytes": 1326562,
+    "pages": 240,
+    "sha256": "845fac6fdd50bd806b38470802d4c95f820d1effeac998d8df89cb74d638d634"
+  },
+  {
+    "stock_code": "603179",
+    "company": "新泉股份",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-04/1225454502.PDF",
+    "disclosure_date": "2026-08-04",
+    "file": "603179_新泉股份_2026H1.pdf",
+    "bytes": 1154996,
+    "pages": 164,
+    "sha256": "a011320d65fa97bf47006f121f49a8e8bb037aa3a83f497c26d949eb73c8bc77"
+  },
+  {
+    "stock_code": "603197",
+    "company": "保隆科技",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225513711.PDF",
+    "disclosure_date": "2026-08-27",
+    "file": "603197_保隆科技_2026H1.pdf",
+    "bytes": 1744017,
+    "pages": 166,
+    "sha256": "7fbf2bea2d4b8096228435394b559ae0c1afc38f1e4b7d99478165d1f9a40ce4"
+  },
+  {
+    "stock_code": "603305",
+    "company": "旭升集团",
+    "report": "2026年半年度报告",
+    "exchange": "上交所/巨潮镜像",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225520349.PDF",
+    "disclosure_date": "2026-08-28",
+    "file": "603305_旭升集团_2026H1.pdf",
+    "bytes": 1412731,
+    "pages": 180,
+    "sha256": "b1c71948eece8b5ce1b68c46d01e89a1870e0a42396d173907ba78dd1328e779"
+  }
+]

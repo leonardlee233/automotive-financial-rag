@@ -1,0 +1,2 @@
+"""Financial-report RAG package."""
+

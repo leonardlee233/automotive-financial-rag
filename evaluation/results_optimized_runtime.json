@@ -1,0 +1,36 @@
+{
+  "run_id": "2026-09-29T11:23:17.388561+00:00",
+  "index": {
+    "embedding_backend": "semantic",
+    "embedding_model": "BAAI/bge-small-zh-v1.5",
+    "embedding_text_prefix": "公司名 + 章节名",
+    "chunk_count": 6224,
+    "vector_dimensions": 512,
+    "bm25_tokenizer": "jieba",
+    "fusion": "RRF(k=60)",
+    "embedding_windowing": "BGE: company+section repeated, 360 chars/40 overlap, normalized mean; Qwen: full chunk",
+    "precision": "float32"
+  },
+  "vectors_sha256": "f97268b249536d4a3c84fd198fe464bd69cf54916e00e2b0c805f1b54f598979",
+  "chunks_sha256": "2c989efa6d7ac394a5c03d1ccec575000faea57b3c56439fd96335006dedab69",
+  "questions_sha256": "f469e4c14d49a8f80e0c62c220dcd68eebe98b26a75bf2b2ebe2c747bee96b08",
+  "source_sha256": {
+    "src/__init__.py": "11c7ed3082d31b24a5b1e06d20636d4fac22d0a68a126d736732138831cd6bbd",
+    "src/answering.py": "2375faa84ddb638547457a8ab8c09bc858b8c3b94e331a33c0f20dca390fece3",
+    "src/chunking.py": "984c46a2220721529e08212568e650f29bf318612b4cc10a54084e9bdb9c6154",
+    "src/common.py": "2ab9c163e473893b8dc1695a0f18e6666ff69dc2191d9c2342463577b1a6b2b5",
+    "src/embeddings.py": "0c3527072581a7fcad9e692c131710922fee7128e3aa74c8414359096ee87ac6",
+    "src/querying.py": "41805522fd138dbe53317ba0418b97c910eb0a70c08caa2c8579b10adde57887",
+    "src/retrieval.py": "8208f2ca4ef9b3021ef5f078aa407aaa77a586197e3daec3db51641f3e5998b4"
+  },
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "jieba": "0.42.1",
+    "rank-bm25": "0.2.2",
+    "numpy": "2.3.5",
+    "pdfplumber": "0.11.9"
+  },
+  "local_llm_sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597"
+}
