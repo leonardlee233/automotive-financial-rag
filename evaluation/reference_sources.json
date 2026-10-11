@@ -1,0 +1,34 @@
+{
+  "Q01": [{"company": "福耀玻璃", "page": 7}],
+  "Q02": [{"company": "福耀玻璃", "page": 42, "table_name_contains": "合并利润表", "scope": "合并"}],
+  "Q03": [{"company": "德赛西威", "page": 12}],
+  "Q04": [{"company": "拓普集团", "page": 5}],
+  "Q05": [{"company": "新泉股份", "page": 14}],
+  "Q06": [{"company": "保隆科技", "page": 25, "text_contains": "母公司报表中期末未分配利润"}],
+  "Q07": [{"company": "均胜电子", "page": 14}],
+  "Q08": [{"company": "旭升集团", "page": 5}],
+  "Q09": [
+    {"company": "福耀玻璃", "page": 7, "table_name_contains": "主要会计数据"},
+    {"company": "拓普集团", "page": 5, "table_name_contains": "主要会计数据"},
+    {"company": "华域汽车", "page": 6, "table_name_contains": "主要会计数据"},
+    {"company": "德赛西威", "page": 8, "table_name_contains": "主要会计数据"},
+    {"company": "伯特利", "page": 6, "table_name_contains": "主要会计数据"},
+    {"company": "星宇股份", "page": 7, "table_name_contains": "主要会计数据"},
+    {"company": "均胜电子", "page": 6, "table_name_contains": "主要会计数据"},
+    {"company": "新泉股份", "page": 7, "table_name_contains": "主要会计数据"},
+    {"company": "保隆科技", "page": 7, "table_name_contains": "主要会计数据"},
+    {"company": "旭升集团", "page": 5, "table_name_contains": "主要会计数据"}
+  ],
+  "Q10": [
+    {"company": "福耀玻璃", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "拓普集团", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "华域汽车", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "德赛西威", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "伯特利", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "星宇股份", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "均胜电子", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "新泉股份", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "保隆科技", "section_contains": "管理层", "text_contains": "风险"},
+    {"company": "旭升集团", "section_contains": "管理层", "text_contains": "风险"}
+  ]
+}

@@ -1,13 +1,28 @@
 # 作业 3 · 方向 A：汽车零部件财报问答知识库
 
 使用 10 家上市公司的 2026 年半年度报告全文，建立可提问、答案带出处的中文知识库。
-提交材料：代码、问答页面截图、一页实验结论。逐题真实答案与完整检索轨迹见 evaluation/results_optimized.jsonl；核验标准见 evaluation/rubric.md。
+**[公开 GitHub 仓库](https://github.com/leonardlee233/automotive-financial-rag)**（2026-10-11 无登录访问核验）。提交材料：代码、[问答页面截图](outputs/streamlit_screenshot.png)、[一页结论 PDF](outputs/one_page_conclusion.pdf)。
+
+从这里查证：[10 份官方全文来源和下载校验](DATA_SOURCES.md) · [召回与答案分开评价](evaluation/retrieval_audit.md) · [10 题答案与完整检索轨迹](evaluation/results_optimized.jsonl) · [独立人工核验状态](evaluation/independent_human_review.md)。
 
 ## 数据
 
-福耀玻璃、拓普集团、华域汽车、德赛西威、伯特利、星宇股份、均胜电子、新泉股份、保隆科技、旭升集团。
-全部为同一期官方完整 PDF，共 1,765 页。9 份来自巨潮资讯官方静态披露地址，德赛西威来自深交所。
-证券代码、报告名、日期、官方 URL 见 config/reports.json；已下载文件的页数和 SHA-256 见 data/processed/download_manifest.json。
+福耀玻璃、拓普集团、华域汽车、德赛西威、伯特利、星宇股份、均胜电子、新泉股份、保隆科技、旭升集团。全部为同一期官方完整 PDF，共 1,765 页。9 份来自巨潮资讯官方静态披露地址，德赛西威来自深交所：
+
+| 公司 | 代码 | 官方全文 | PDF页数 |
+|---|---|---|---:|
+| 福耀玻璃 | 600660 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-19/1225479532.PDF) | 142 |
+| 拓普集团 | 601689 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-28/1225521853.PDF) | 188 |
+| 华域汽车 | 600741 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-28/1225516573.PDF) | 149 |
+| 德赛西威 | 002920 | [深交所 PDF](https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-14/2aab2da4-0d48-471f-b396-fbded887d69c.PDF) | 144 |
+| 伯特利 | 603596 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-28/1225521940.PDF) | 249 |
+| 星宇股份 | 601799 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-27/1225509977.PDF) | 143 |
+| 均胜电子 | 600699 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-26/1225506436.PDF) | 240 |
+| 新泉股份 | 603179 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-04/1225454502.PDF) | 164 |
+| 保隆科技 | 603197 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-27/1225513711.PDF) | 166 |
+| 旭升集团 | 603305 | [巨潮 PDF](https://static.cninfo.com.cn/finalpage/2026-08-28/1225520349.PDF) | 180 |
+
+报告名、披露日期、完整 URL 和 SHA-256 见 [来源清单](DATA_SOURCES.md)、`config/reports.json` 与 `data/processed/download_manifest.json`。
 不在仓库中附带原始 PDF；下载脚本检查 PDF 文件头和页数。
 
 ## 实现
@@ -64,14 +79,19 @@ python scripts/build_index.py --backend qwen --model Qwen/Qwen3-Embedding-0.6B
 ```powershell
 python scripts/evaluate.py
 python scripts/evaluate_panorama.py
+python scripts/audit_retrieval.py
 python -m pytest -q
 ```
 
-10 道原题不变，含 2 道跨公司题。每题记录原问法、检索问法、两路完整候选、最终块全文、回答、模型配置、索引/回答摘要哈希。
-正确率只按 correct / 10 计算，partial 不算正确。这是用于优化的开发题集，不能推断所有财报问题都达到同样正确率。
+10 道原题不变，含 2 道跨公司题。每题记录原问法、检索问法、两路完整候选、融合候选、最终块全文、回答、模型配置、索引/回答摘要哈希。先核对报告、期间、单位、表名、合并/母公司口径与 PDF 原页，再评价答案。
 
-评测脚本先把新答案记为 pending，不会自动编造人工评分。
-逐题对照原报告核验后，将 verdict、reason、sources 和对应 answer_sha256 写入 review 文件，再执行：
+**召回与答案分开算：**[逐题召回审计](evaluation/retrieval_audit.md)按固定来源页/公司核对。Q01–Q08 最终证据各命中 1/1；Q09 融合候选只覆盖 7/10 家，逐公司补查表格后最终证据 10/10；Q10 最终证据 10/10。来源命中不等于答案正确：Q05 把 14.40% 写成 14.40 成，Q09 缺经营差异原文解释，Q10 风险归类有边界。Vector/BM25 是较大的候选池，候选命中也不能冒充 Top-K 答对。
+
+**答案判定：**7/10 完全正确、3/10 部分正确；partial 不算正确。这是用于优化的开发题集，不是未知题的泛化正确率。`manual_verdict` 是早期兼容字段，实际含义是 **AI 助手对照原文后的辅助判定**，新字段 `ai_verdict` 明确标注。
+
+**独立人工核验：尚未完成（0/10）。** 不能把 AI 辅助判定称作独立人工评审。[独立核验表](evaluation/independent_human_review.md)留给用户或老师逐页填写核验人、日期、判定及差异；在填完前不报告“人工正确率”。
+
+评测脚本先把新答案记为 pending，不会自动编造评分。AI 助手辅助逐题对照原报告后，将 verdict、reason、sources 和对应 answer_sha256 写入 review 文件，再执行：
 
 ```powershell
 python scripts/review_evaluation.py evaluation/results_optimized.jsonl evaluation/review_optimized.json
@@ -81,7 +101,7 @@ python scripts/validate_project.py
 python scripts/package_project.py
 ```
 
-核验由助手对照原文执行，未冒称已有独立人工评审。用户可以依据保留的页码复核。
+表格口径的核验不能只看页码：Q02 要核对第42页**合并利润表**，避免同页母公司表；Q06 所引的是第25页“母公司报表中期末未分配利润为人民币216,288,909.09元”的叙述句，不能把同页表头的“万元”套到该句；Q05 来源表未明确合并口径，回答中的“合并口径”缺依据。
 evaluation/results_base.* 和 results_rewrite.* 是旧版“哈希向量 + 截取原文”的失败原型记录，仅作历史追踪，不用于证明真实语义 RAG 的一般能力。
 
 ## 交付文件

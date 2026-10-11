@@ -1,0 +1,461 @@
+[
+  {
+    "id": "Q01",
+    "type": "单公司事实",
+    "question": "福耀玻璃2026年上半年营业收入和归母净利润分别是多少？同比怎样？",
+    "source_requirement": [
+      {
+        "company": "福耀玻璃",
+        "page": 7
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q02",
+    "type": "表格口径",
+    "question": "福耀玻璃合并利润表里的营业收入是多少？不要给我母公司利润表数字，并说明单位和PDF页码。",
+    "source_requirement": [
+      {
+        "company": "福耀玻璃",
+        "page": 42,
+        "table_name_contains": "合并利润表",
+        "scope": "合并"
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q03",
+    "type": "多子问题",
+    "question": "德赛西威上半年研发投入多少钱、占营业收入比例多少、同比变动怎样？请三个都回答。",
+    "source_requirement": [
+      {
+        "company": "德赛西威",
+        "page": 12
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q04",
+    "type": "长口语",
+    "question": "我想看拓普今年上半年到底卖了多少钱、赚了多少归母净利润，顺便告诉我经营现金流怎么样，别拿去年全年数，统一用2026年1到6月。",
+    "source_requirement": [
+      {
+        "company": "拓普集团",
+        "page": 5
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q05",
+    "type": "改写表达",
+    "question": "新泉股份今年前两个季度在技术开发上花了多少钱，和去年同期相比增减几成？",
+    "source_requirement": [
+      {
+        "company": "新泉股份",
+        "page": 14
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "partial",
+    "answer_error_type": "单位换算错误；合并口径无明确依据",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q06",
+    "type": "表格口径",
+    "question": "保隆科技母公司口径期末未分配利润是多少？请勿混用合并口径。",
+    "source_requirement": [
+      {
+        "company": "保隆科技",
+        "page": 25,
+        "text_contains": "母公司报表中期末未分配利润"
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q07",
+    "type": "单公司事实",
+    "question": "均胜电子2026年上半年研发投入及占收入比例是多少？",
+    "source_requirement": [
+      {
+        "company": "均胜电子",
+        "page": 14
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q08",
+    "type": "多子问题",
+    "question": "旭升集团上半年营业收入、归母净利润、经营活动现金流量净额分别是多少，并分别给出同比变化？",
+    "source_requirement": [
+      {
+        "company": "旭升集团",
+        "page": 5
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 1,
+        "total": 1,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "correct",
+    "answer_error_type": "无",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q09",
+    "type": "跨公司全景",
+    "question": "比较这10家公司2026年上半年的营业收入和归母净利润，给出完整排名并解释差异。",
+    "source_requirement": [
+      {
+        "company": "福耀玻璃",
+        "page": 7,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "拓普集团",
+        "page": 5,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "华域汽车",
+        "page": 6,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "德赛西威",
+        "page": 8,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "伯特利",
+        "page": 6,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "星宇股份",
+        "page": 7,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "均胜电子",
+        "page": 6,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "新泉股份",
+        "page": 7,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "保隆科技",
+        "page": 7,
+        "table_name_contains": "主要会计数据"
+      },
+      {
+        "company": "旭升集团",
+        "page": 5,
+        "table_name_contains": "主要会计数据"
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 7,
+        "total": 10,
+        "missing_companies": [
+          "星宇股份",
+          "均胜电子",
+          "旭升集团"
+        ]
+      },
+      "final_chunks": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "partial",
+    "answer_error_type": "经营差异原因证据不足",
+    "independent_human_review": "not_done"
+  },
+  {
+    "id": "Q10",
+    "type": "跨公司全景",
+    "question": "综合10家公司管理层讨论，归纳它们共同面临的经营风险，并指出每类风险涉及哪些公司。",
+    "source_requirement": [
+      {
+        "company": "福耀玻璃",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "拓普集团",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "华域汽车",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "德赛西威",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "伯特利",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "星宇股份",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "均胜电子",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "新泉股份",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "保隆科技",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      },
+      {
+        "company": "旭升集团",
+        "section_contains": "管理层",
+        "text_contains": "风险"
+      }
+    ],
+    "stages": {
+      "vector_recall": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      },
+      "bm25_recall": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      },
+      "fused_candidates": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      },
+      "final_chunks": {
+        "hits": 10,
+        "total": 10,
+        "missing_companies": []
+      }
+    },
+    "ai_answer_verdict": "partial",
+    "answer_error_type": "风险类别自动归纳边界",
+    "independent_human_review": "not_done"
+  }
+]
